@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Create Document {% endblock %}
+{% block content %}
+  <section>
+    <div></div>
+  </section>
+  <h1>Confirm Delete</h1>
+{% endblock %}
+{% block content2 %}
+<h3>Are you sure you want to delete?</h3>
+<a class="btn btn-light" href="{{ url_for ('index') }}">Nope </a>
+<a class="btn btn-danger" href="{{ url_for ('delete', edit_id=user_id) }}">Yes </a>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} Create Document {% endblock %}
+{% block content %}
+  <section>
+    <div></div>
+  </section>
+  <h1>Hello Edit World</h1>
+{% endblock %}
+{% block content2 %}
+<section class="p-5">
+  <h2>Let's start creating</h2>
+
+  <form method="POST">
+    <input type="text" name="username" placeholder="Enter username" value="{{user.username}}"><br>
+    <label for="user">Select your gender : </label>
+    <input type="radio"  name="gender" value ="Male">Male
+    <input type="radio" name="gender" value ="Female">Female
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</section>
+{% endblock %}

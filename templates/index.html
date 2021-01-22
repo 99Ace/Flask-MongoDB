@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %} Index Document {% endblock %}
+{% block content %}
+  <main>
+    <div class="hero"></div>
+  </main>
+  <h1>Hello Index World</h1>
+{% endblock %}
+{% block content2 %} 
+<h1>All User Profile</h1>
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consectetur. Voluptas assumenda officia, quos ratione animi quaerat culpa laborum id commodi qui saepe cupiditate atque. Quam fuga consequatur repellendus dignissimos!
+</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Username</th>
+        <th scope="col">Gender</th>
+        <th></th>
+        <th></th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in data %}
+      <tr>
+        <td> {{user.username}}</td>
+        <td> {{user.gender}}</td>
+        <td>
+          <a href="{{ url_for('edit', edit_id=user._id) }}">Edit</a>
+        </td>
+        <td>
+          <a href="{{ url_for('confirm_delete', edit_id=user._id) }}">Delete</a>
+        </td>
+
+      </tr>
+        
+      {% endfor %}
+     
+    </tbody>
+  </table>
+{% endblock %}
